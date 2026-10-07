@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ULMS - Requirement Analysis Questionnaire</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; margin: 0; padding: 20px; color: #333; }
+        .container { max-width: 750px; background: #fff; margin: 0 auto; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1 { color: #1e3c72; border-bottom: 2px solid #1e3c72; padding-bottom: 10px; text-align: center; }
+        h2 { color: #2a5298; margin-top: 25px; font-size: 1.2rem; }
+        .question { margin-bottom: 20px; }
+        label { font-weight: 600; display: block; margin-bottom: 8px; }
+        .options { margin-left: 10px; }
+        .options label { font-weight: normal; display: block; margin-bottom: 5px; cursor: pointer; }
+        input[type="text"], select { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
+        .submit-btn { background-color: #1e3c72; color: white; padding: 12px 25px; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer; display: block; width: 100%; margin-top: 30px; font-weight: bold; }
+        .submit-btn:hover { background-color: #2a5298; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>University Library Management System (ULMS)</h1>
+    <p style="text-align: center; color: #666;">Requirement Analysis Questionnaire - SWE214/SENG231 Lab 3</p>
+    <hr>
+
+    <form id="surveyForm" onsubmit="event.preventDefault(); alert('Thank you! Your responses have been recorded successfully.');">
+        
+        <h2>Section A: Context & Background</h2>
+        <div class="question">
+            <label>1. What is your role at the university?</label>
+            <div class="options">
+                <label><input type="radio" name="role" required> Student</label>
+                <label><input type="radio" name="role"> Faculty Member</label>
+                <label><input type="radio" name="role"> Librarian</label>
+                <label><input type="radio" name="role"> Other</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <label>2. How often do you use the university library?</label>
+            <div class="options">
+                <label><input type="radio" name="freq" required> Daily</label>
+                <label><input type="radio" name="freq"> Several times a week</label>
+                <label><input type="radio" name="freq"> Once a week</label>
+                <label><input type="radio" name="freq"> Occasionally / Rarely</label>
+            </div>
+        </div>
+
+        <h2>Section B: Current System & Limitations</h2>
+        <div class="question">
+            <label>3. How do you usually search for a book currently?</label>
+            <div class="options">
+                <label><input type="radio" name="search_way" required> Library catalog</label>
+                <label><input type="radio" name="search_way"> Ask a librarian</label>
+                <label><input type="radio" name="search_way"> Manual search on shelves</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <label>4. Do you experience delays or difficulties checking book availability?</label>
+            <div class="options">
+                <label><input type="radio" name="diff" required> Yes, frequently</label>
+                <label><input type="radio" name="diff"> Sometimes</label>
+                <label><input type="radio" name="diff"> No</label>
+            </div>
+        </div>
+
+        <h2>Section C: Requirements for New System</h2>
+        <div class="question">
+            <label>5. Which features are most important to you? (Select all that apply)</label>
+            <div class="options">
+                <label><input type="checkbox" name="feat"> Real-time Book Availability Search</label>
+                <label><input type="checkbox" name="feat"> Online Book Reservation</label>
+                <label><input type="checkbox" name="feat"> Borrowing History & Due-date Notifications</label>
+                <label><input type="checkbox" name="feat"> Fine Status & Management</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <label>6. Would online reservation save your time before visiting the library?</label>
+            <div class="options">
+                <label><input type="radio" name="res" required> Yes, absolutely</label>
+                <label><input type="radio" name="res"> Neutral</label>
+                <label><input type="radio" name="res"> No</label>
+            </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Feedback</button>
+    </form>
+</div>
+
+</body>
+</html>
